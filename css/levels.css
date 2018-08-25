@@ -1,0 +1,72 @@
+#wordlist {
+    height: 100px;
+    width: 300px;
+    border-left: 5px solid transparent;
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+    animation: showup 0.5s ease-out 2.3s forwards;
+    box-sizing: border-box;
+}
+
+#arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-left: 13px solid #222a38;
+    top: 37px;
+    opacity: 0;
+    animation: buttin 0.5s ease-out 2.3s forwards;
+}
+
+#scrollingwords {
+    height: auto;
+    width: 200px;
+    margin-left: 30px;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 33px;
+    transition: margin-top 0.2s ease-out;
+}
+
+#scrollingwords ul {
+    margin-top: 300px;
+    animation: scrollonload 1s ease-out 1.5s forwards;
+}
+
+@keyframes scrollonload {
+    0% {
+        margin-top: 300px;
+    }
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@keyframes showup {
+    0% {
+        border-left: 5px solid transparent;
+    }
+    100% {
+        border-left: 5px solid #222a38;
+    }
+}
+
+@keyframes buttin {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#scrollingwords li {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.2);
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 13pt;
+    transition: font-size 0.2s linear, color 0.2s linear;
+}
